@@ -4,7 +4,7 @@ import Home from './pages/Home';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/libreria-pwa">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

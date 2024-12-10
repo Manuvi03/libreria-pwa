@@ -1,6 +1,6 @@
 const CACHE_NAME = 'book-search-cache-v1';
 const urlsToCache = [
-  '/',
+  './',
   '/index.html',
   '/static/js/main.chunk.js',
   '/static/js/0.chunk.js',
