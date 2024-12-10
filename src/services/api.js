@@ -20,6 +20,12 @@ export const getBooks = async (title, genre) => {
         maxResults: 20,
       },
     });
+    
+      // Verifica si response.data.items existe y es un array
+      if (!response.data.items || !Array.isArray(response.data.items)) {
+        console.warn('No se encontraron resultados o la respuesta no es un array:', response.data);
+        return []; // Devuelve un array vacío si no hay resultados
+      }
 
     return response.data.items.map(item => ({
       id: item.id,
