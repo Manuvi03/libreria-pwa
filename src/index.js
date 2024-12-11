@@ -14,7 +14,7 @@ root.render(
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('${process.env.PUBLIC_URL}/service-worker.js')
+    navigator.serviceWorker.register('${process.env.PUBLIC_URL}/sw.js')
       .then((registration) => {
         console.log('Service Worker registrado con éxito:', registration);
       })
