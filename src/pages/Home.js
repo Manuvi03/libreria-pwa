@@ -11,7 +11,7 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
     const [clickedBooks, setClickedBooks] = useState([]);
   
-    // Recuperar datos del localStorage al montar el componente
+    // Recuperar datos del localStorage al montar el libro en cuestion
     useEffect(() => {
       const storedClickedBooks = JSON.parse(localStorage.getItem('clickedBooks')) || [];
       setClickedBooks(storedClickedBooks);
@@ -22,6 +22,7 @@ const Home = () => {
       localStorage.setItem('clickedBooks', JSON.stringify(clickedBooks));
     }, [clickedBooks]);
   
+    
     useEffect(() => {
       if (titleQuery || genreFilter) {
         setLoading(true);

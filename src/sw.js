@@ -1,18 +1,33 @@
 const CACHE_NAME = 'book-search-cache-v1';
 const urlsToCache = [
-  './',
   '/index.html',
-  '/static/js/main.chunk.js',
-  '/static/js/0.chunk.js',
-  '/static/js/bundle.js',
-  '/static/css/main.chunk.css'
+  '/manifest.json',
+  '/robots.txt',
+  '/favicon.ico',
+  '/favicon-16x16.png',
+  '/favicon-32x32.png',
+  '/android-chrome-192x192.png',
+  '/android-chrome-512x512.png',
+  '/apple-touch-icon.png',
+  '/default-cover.png',
+  '/src/styles/global.css',
+  '/src/styles/index.css',
+  '/src/App.js',
+  '/src/index.js',
+  '/src/pages/Home.js',
+  '/src/components/Book.js',
+  '/src/components/BookList.js',
+  '/src/components/FilterBar.js',
+  '/src/components/SearchBar.js',
+  '/src/services/api.js',
+  '/src/reportWebVitals.js',
+  '/src/sw.js'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
       .catch((error) => {
