@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/libreria-pwa/static/css/main.a9cf3ce3.css",
-    "main.js": "/libreria-pwa/static/js/main.dc39f724.js",
+    "main.js": "/libreria-pwa/static/js/main.0c45c44d.js",
     "static/js/488.d8ec863c.chunk.js": "/libreria-pwa/static/js/488.d8ec863c.chunk.js",
     "static/media/default-cover.png": "/libreria-pwa/static/media/default-cover.826c6055d2cf09ef5523.png",
     "index.html": "/libreria-pwa/index.html",
     "main.a9cf3ce3.css.map": "/libreria-pwa/static/css/main.a9cf3ce3.css.map",
-    "main.dc39f724.js.map": "/libreria-pwa/static/js/main.dc39f724.js.map",
+    "main.0c45c44d.js.map": "/libreria-pwa/static/js/main.0c45c44d.js.map",
     "488.d8ec863c.chunk.js.map": "/libreria-pwa/static/js/488.d8ec863c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9cf3ce3.css",
-    "static/js/main.dc39f724.js"
+    "static/js/main.0c45c44d.js"
   ]
 }
