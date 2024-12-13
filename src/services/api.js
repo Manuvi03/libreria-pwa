@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = "AIzaSyBlZTkj07d-2LykWq_3GgRW3l_dKHHBCS4"; // Clave de la API de Google Books
+const API_KEY = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY; // Clave de la API de Google Books
 const BASE_URL = "https://www.googleapis.com/books/v1/volumes";
 
 export const getBooks = async (title, genre) => {
@@ -20,6 +20,12 @@ export const getBooks = async (title, genre) => {
         maxResults: 20,
       },
     });
+    
+      // Verifica si response.data.items existe y es un array
+      if (!response.data.items || !Array.isArray(response.data.items)) {
+        console.warn('No se encontraron resultados o la respuesta no es un array:', response.data);
+        return []; // Devuelve un array vacío si no hay resultados
+      }
 
     return response.data.items.map(item => ({
       id: item.id,

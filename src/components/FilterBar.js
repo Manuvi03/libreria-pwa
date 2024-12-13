@@ -3,9 +3,9 @@ import React from 'react';
 const genres = [
   "Aventuras",
   "Ciencia Ficción",
-  "Histórica",
+  "Historia",
   "Novela Negra",
-  "Romántica",
+  "Romance",
   "Terror",
   "Tecnología"
 ];
