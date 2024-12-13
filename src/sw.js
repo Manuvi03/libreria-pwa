@@ -12,11 +12,11 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Opened cache');
+        console.log('Abierta la cache');
         return cache.addAll(urlsToCache);
       })
       .catch((error) => {
-        console.error('Error during cache installation:', error);
+        console.error('Error al instalar la cache', error);
       })
   );
 });

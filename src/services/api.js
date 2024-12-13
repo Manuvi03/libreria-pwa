@@ -11,7 +11,7 @@ export const getBooks = async (title, genre) => {
       url += `+subject:${encodeURIComponent(genre)}`;
     }
 
-    // Añado un console.log para mostrar la URL
+    // Console log para debugear
     console.log('URL:', url);
 
     const response = await axios.get(url, {
@@ -24,7 +24,7 @@ export const getBooks = async (title, genre) => {
       // Verifica si response.data.items existe y es un array
       if (!response.data.items || !Array.isArray(response.data.items)) {
         console.warn('No se encontraron resultados o la respuesta no es un array:', response.data);
-        return []; // Devuelve un array vacío si no hay resultados
+        return []; 
       }
 
     return response.data.items.map(item => ({
@@ -36,7 +36,7 @@ export const getBooks = async (title, genre) => {
       link: item.volumeInfo.infoLink, 
     }));
   } catch (error) {
-    console.error('Error fetching books:', error);
+    console.error('Error recuperando los libros', error);
     return [];
   }
 };

@@ -26,6 +26,7 @@ const Home = () => {
       if (titleQuery || genreFilter) {
         setLoading(true);
         getBooks(titleQuery, genreFilter).then(data => {
+          
           setBooks(data);
           setLoading(false);
         });
@@ -33,15 +34,18 @@ const Home = () => {
     }, [titleQuery, genreFilter]);
   
     const handleSearch = (query) => {
+
       setTitleQuery(query);
     };
   
     const handleFilter = (genre) => {
+
       setGenreFilter(genre);
     };
   
     const handleBookClick = (book) => {
       const newClickedBooks = [book, ...clickedBooks.filter(b => b.id !== book.id)];
+
       if (newClickedBooks.length > 5) {
         newClickedBooks.pop(); // Descarta el libro más antiguo si ya hay 5 libros
       }
