@@ -1,5 +1,6 @@
 const CACHE_NAME = 'book-search-cache-v1';
 const urlsToCache = [
+  './',
   '/index.html',
   '/manifest.json',
   '/robots.txt',
